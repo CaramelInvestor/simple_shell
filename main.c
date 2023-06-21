@@ -9,9 +9,12 @@ int main(void)
 {
 	while (true)
 	{
+		char *line;
+		char **tokens;
+
 		_printf("#cisfun$ ");
-		char *line = read_line();
-		char **tokens = split_line(line);
+		line = read_line();
+		tokens = split_line(line);
 
 		if (tokens[0] != NULL)
 		{
