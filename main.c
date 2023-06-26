@@ -25,9 +25,9 @@ int main(void)
 			}
 
 			 /*Check for the env built-in command*/
-			if (_strcmp(tokens[0], "env") == 0)
+			if (_strcmp(tokens[0], "envs") == 0)
 			{
-				print_env();
+				prints_env();
 				continue;
 			}
 			_exec(tokens);

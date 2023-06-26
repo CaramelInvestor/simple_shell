@@ -20,7 +20,7 @@ int _putchar(char c);
 void _exec(char **args);
 char **split_line(char *line);
 char *read_line();
-void print_env(void);
+void prints_env(void);
 int _printf(const char *format, ...);
 
 #endif /*SHELL_H_*/
