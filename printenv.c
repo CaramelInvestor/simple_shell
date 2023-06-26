@@ -10,7 +10,8 @@ void prints_env(void)
 
 	while (*envs != NULL)
 	{
-		_printf("%s\n", *envs);
+		_puts(*envs);
+		_puts("\n");
 		envs++;
 	}
 }

@@ -12,7 +12,7 @@ int main(void)
 		char *line;
 		char **tokens;
 
-		_printf("#cisfun$ ");
+		_puts("#cisfun$ ");
 		line = read_line();
 		tokens = split_line(line);
 
@@ -21,6 +21,10 @@ int main(void)
 			/*Check for the exit built-in command*/
 			if (_strcmp(tokens[0], "exit") == 0)
 			{
+				if (tokens != NULL && tokens[0] != NULL)
+				free(tokens);
+				if (line)
+				free(line);
 				break;
 			}
 
@@ -31,7 +35,6 @@ int main(void)
 				continue;
 			}
 			_exec(tokens);
-
 			free(tokens);
 			free(line);
 		}

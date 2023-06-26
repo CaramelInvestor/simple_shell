@@ -12,6 +12,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <stdarg.h>
+#include <stdbool.h>
 
 extern char **environ;
 
@@ -22,5 +23,12 @@ char **split_line(char *line);
 char *read_line();
 void prints_env(void);
 int _printf(const char *format, ...);
+int _isalpha(int c);
+int _isalnum(int c);
+char *_strncat(char *dest, char *src, int n);
+int strcmp_chars(char str[], const char *delim);
+char *_strtok3(char str[], const char *delim);
+int str_len(char *str);
+int _puts(const char *str);
 
 #endif /*SHELL_H_*/
