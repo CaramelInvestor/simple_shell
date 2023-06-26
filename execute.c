@@ -13,7 +13,7 @@ int status;
 if (child_pid == 0)
 {
 execvp(args[0], args);
-perror("kash");
+perror("error detected");
 exit(1);
 }
 else if (child_pid > 0)
@@ -24,7 +24,7 @@ waitpid(child_pid, &status, WUNTRACED);
 }
 else
 {
-perror("kash");
+perror("error detected");
 }
 }
 
