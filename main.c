@@ -1,13 +1,12 @@
 #include "shell.h"
 
 /**
- * main - entry point of the shell program.
- * Return: 0 on success.
+ * main - entry point of the shell program
+ * Return: 0 on success
  */
-
 int main(void)
 {
-	while (true)
+	while (1)
 	{
 		char *line;
 		char **tokens;
