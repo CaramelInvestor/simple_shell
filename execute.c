@@ -9,10 +9,23 @@ void _exec(char **args)
 {
 	pid_t child_pid = fork();
 	int status;
+	char *arg = NULL;
 
 	if (child_pid == 0)
 	{
-		execvp(args[0], args);
+		if (_strncmp(args[0], "/bin/", 5) == 0)
+		{
+			execve(args[0], args, environ);
+		}
+		else
+		{
+			arg = malloc(str_len(args[0]) * 6);
+			_strcpy(arg, "/bin/");
+			_strcat(arg, args[0]);
+			_strcat(arg, "\0");
+			execve(arg, args, environ);
+			free(arg);
+		}
 		perror("error detected");
 		exit(1);
 	}
