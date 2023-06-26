@@ -12,7 +12,7 @@ int main(void)
 		char *line;
 		char **tokens;
 
-		_puts("#cisfun$ ");
+		_puts("($) ");
 		line = read_line();
 		tokens = split_line(line);
 
