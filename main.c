@@ -14,6 +14,12 @@ int main(void)
 
 		_puts("($) ");
 		line = read_line();
+
+		if (line == NULL)
+		{
+			_puts("\n");
+			break;
+		}
 		tokens = split_line(line);
 
 		if (tokens[0] != NULL)
@@ -29,7 +35,7 @@ int main(void)
 			}
 
 			 /*Check for the env built-in command*/
-			if (_strcmp(tokens[0], "envs") == 0)
+			if (_strcmp(tokens[0], "env") == 0)
 			{
 				prints_env();
 				continue;
