@@ -46,8 +46,6 @@ _putchar(*format);
 }
 format++;
 }
-
 va_end(args);
-
 return (0);
 }
