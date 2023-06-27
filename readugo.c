@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * read_line - Reads user input from input stream
+ * read_buff - Reads user input from input stream
  * Return: The line of user input.
  */
 
-char *read_line(void)
+char *read_buff(void)
 {
 char *line = NULL;
 size_t buflen = 0;

@@ -17,7 +17,6 @@
 
 extern char **environ;
 
-void handleCtrlD(int signal);
 int _putchar(char c);
 void _exec(char **args);
 char **split_line(char *line);

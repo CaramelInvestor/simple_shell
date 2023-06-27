@@ -1,23 +1,11 @@
 #include "shell.h"
-/**
- * handleCtrlD - function to handle signal
- *@signal: variable
- */
-void handleCtrlD(int signal)
-{
-	if (signal == SIGINT)
-	{
-		exit(0);
-	}
-}
+
 /**
  * main - entry point of the shell program
  * Return: 0 on success
  */
 int main(void)
 {
-	signal(SIGINT, handleCtrlD);
-
 	while (1)
 	{
 		char *line;
