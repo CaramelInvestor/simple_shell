@@ -6,19 +6,14 @@
  */
 int main(void)
 {
-	while (1)
+	size_t bufferSize = 0;
+	ssize_t bytesRead;
+
+	char *line;
+	char **tokens;
+
+	while (_puts("($) ") && (bytesRead = getline(&line, &bufferSize, stdin)) != -1)
 	{
-		char *line;
-		char **tokens;
-
-		_puts("($) ");
-		line = read_line();
-
-		if (line == NULL)
-		{
-			_puts("\n");
-			break;
-		}
 		tokens = split_line(line);
 
 		if (tokens[0] != NULL)
