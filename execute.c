@@ -23,7 +23,7 @@ void _exec(char **args)
 			_strcpy(arg, "/bin/");
 			_strcat(arg, args[0]);
 			_strcat(arg, "\0");
-			execve(arg, args, environ);
+			execve(arg, args, NULL);
 			free(arg);
 		}
 		perror("error detected");
