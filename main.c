@@ -12,7 +12,8 @@ int main(void)
 	char *line;
 	char **tokens;
 
-	while (_puts("($) ") && (bytesRead = getline(&line, &bufferSize, stdin)) != -1)
+	while (_puts("($) ") &&
+	(bytesRead = getline(&line, &bufferSize, stdin)) != -1)
 	{
 		tokens = split_line(line);
 
