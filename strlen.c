@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * str_len - function to count numbers of string
+ * str_len - function counts the num chars of a string
  *
  * @str: pointer to null terminated string to be counted
  *
