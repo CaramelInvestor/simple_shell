@@ -97,6 +97,7 @@ Usage: exit status, where status is an integer used to exit the shell
 
 9. setenv, unsetenv
 #advanced
+MANDATORY TASKS MUST BE DONE TO RESUME FURTHER WITH ADVANCED TASKS
 
 Simple shell 1.0 +
 
