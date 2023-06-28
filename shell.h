@@ -38,5 +38,6 @@ int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 char *_strdup(char *str);
 int _strncmp(char *s1, char *s2, size_t n);
+int _atoi(char *str);
 
 #endif /*SHELL_H_*/

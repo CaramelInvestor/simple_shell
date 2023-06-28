@@ -24,7 +24,10 @@ int main(void)
 			{
 				if (line)
 				free(line);
-				break;
+				if (tokens[1] == NULL)
+				exit(0);
+				else if (tokens[1][0] >= 0 && tokens[1][0] <= 9)
+				exit(_atoi(tokens[1]));
 			}
 			 /*Check for the env built-in command*/
 			if (_strcmp(tokens[0], "env") == 0)
