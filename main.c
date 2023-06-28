@@ -9,7 +9,7 @@ int main(void)
 	size_t bufferSize = 0;
 	ssize_t bytesRead;
 
-	char *line;
+	char *line = NULL;
 	char **tokens;
 
 	while ((bytesRead = getline(&line, &bufferSize, stdin)) != -1)
@@ -22,10 +22,7 @@ int main(void)
 			/*Check for the exit built-in command*/
 			if (_strcmp(tokens[0], "exit") == 0)
 			{
-				if (tokens != NULL && line != NULL)
-				{
-					free(tokens);
-				}
+				if (line)
 				free(line);
 				break;
 			}
@@ -36,8 +33,10 @@ int main(void)
 				continue;
 			}
 			_exec(tokens);
-			free(tokens);
 		}
 	}
+	if (line != NULL)
+	free(line);
+
 	return (0);
 }
