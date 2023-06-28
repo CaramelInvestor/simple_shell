@@ -3,6 +3,7 @@
 /**
  * _exec - Executes the program with an array of token given.
  * @args: List of tokens to be read and executed.
+ * Return: void
  */
 
 void _exec(char **args)
