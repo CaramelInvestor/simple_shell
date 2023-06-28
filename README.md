@@ -153,8 +153,8 @@ alias name='value' [...]: Defines an alias for each name whose value is given. I
 Simple shell 1.0 +
 
 Handle variables replacement
-Handle the $? variable
-Handle the $$ variable
+Handle the $? VARIABLE
+Handle the $$ VARIABLE
 
 15. Comments
 #advanced
