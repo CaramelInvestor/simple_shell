@@ -108,7 +108,7 @@ Initialize a new environment variable, or modify an existing one
 Command syntax: setenv VARIABLE VALUE
 Should print something on stderr on failure
 unsetenv
-Remove an environment variable
+Remove an environment VARIABLE
 Command syntax: unsetenv VARIABLE
 Should print something on stderr on failure
 Error handling is very important to prevent segmentation faults
