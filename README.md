@@ -111,6 +111,7 @@ unsetenv
 Remove an environment variable
 Command syntax: unsetenv VARIABLE
 Should print something on stderr on failure
+Error handling is very important to prevent segmentation faults
 
 10. cd
 #advanced
