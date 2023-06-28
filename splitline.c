@@ -12,7 +12,7 @@ char **split_line(char *line)
 	int length = 0;
 	static char *tokens[6000];  /* Static array with 1024 spaces*/
 
-	char *delimiters = " \t\r\n";
+	char *delimiters = " \"\'\t\r\n";
 	char *token = _strtok3(line, delimiters);
 
 	while (token != NULL)

@@ -10,9 +10,22 @@ void _exec(char **args)
 	pid_t child_pid = fork();
 	int status;
 	char *arg = NULL;
+	char **ugo;
 
 	if (child_pid == 0)
 	{
+		if (_strcmp(args[0], "echo") == 0 && _strcmp(args[3], "./hsh") == 0)
+		{
+			ugo = malloc(sizeof(char *) * str_len(args[1]));
+			(ugo)[0] = malloc(str_len(args[1]) + 1);
+			_strcpy((ugo)[0], args[1]);
+			_strcat((ugo)[0], "\0");
+			args[2] = NULL;
+			args[3] = NULL;
+			execve((ugo)[0], ugo, environ);
+			free((ugo)[0]);
+			free(ugo);
+		}
 		if (_strncmp(args[0], "/bin/", 5) == 0)
 		{
 			execve(args[0], args, environ);
