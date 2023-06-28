@@ -12,9 +12,9 @@ int main(void)
 	char *line;
 	char **tokens;
 
-	while (_puts("($) ") &&
-	(bytesRead = getline(&line, &bufferSize, stdin)) != -1)
+	while ((bytesRead = getline(&line, &bufferSize, stdin)) != -1)
 	{
+		/*write(STDIN_FILENO, "#FATE ", 6);*/
 		tokens = split_line(line);
 
 		if (tokens[0] != NULL)
