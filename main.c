@@ -22,9 +22,10 @@ int main(void)
 			/*Check for the exit built-in command*/
 			if (_strcmp(tokens[0], "exit") == 0)
 			{
-				if (tokens != NULL)
-				free(tokens);
-				if (line != NULL)
+				if (tokens != NULL && line != NULL)
+				{
+					free(tokens);
+				}
 				free(line);
 				break;
 			}
@@ -35,10 +36,7 @@ int main(void)
 				continue;
 			}
 			_exec(tokens);
-			if (tokens != NULL)
 			free(tokens);
-			if (line != NULL)
-			free(line);
 		}
 	}
 	return (0);
