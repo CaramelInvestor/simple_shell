@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * _printf - Entry point
+ * _printf - Function to display output
  * @format: A string containing all the desired characters
  * Description: Receives the main string and all the necessary parameters to
  * print a formated string
- * Return: 0 on success
+ * Return: 0 (successful)
  */
 
 int _printf(const char *format, ...)
