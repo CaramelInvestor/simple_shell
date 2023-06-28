@@ -106,7 +106,7 @@ Implement the setenv and unsetenv builtin commands
 setenv
 Initialize a new environment variable, or modify an existing one
 Command syntax: setenv VARIABLE VALUE
-Should print something on stderr on failure
+Should print something on STDERR on failure
 unsetenv
 Remove an environment VARIABLE
 Command syntax: unsetenv VARIABLE
