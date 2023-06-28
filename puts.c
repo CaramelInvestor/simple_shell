@@ -3,7 +3,7 @@
 /**
  * _puts - function to print srings to standard output
  *
- * @str: string to be printed
+ * @str: the string to be printed
  *
  * Return: number of character printed
  */

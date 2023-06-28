@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * read_line - Reads user input from input stream
  * Return: The line of user input.
