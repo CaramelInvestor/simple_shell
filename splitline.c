@@ -2,7 +2,7 @@
 
 /**
  * split_line - Splits a single line of user input into tokens
- * which will be used for execution of commands.
+ * that will be used for the execution of commands.
  * @line: a single line of user input from the input stream.
  * Return: Returns tokens which will be used to execute a program
  */
