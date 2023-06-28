@@ -5,7 +5,7 @@
  *
  * @str: string to be converted to number
  *
- * Return: the number
+ * Return: the number after onvertion from string
  */
 
 int _atoi(char *str)
