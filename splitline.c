@@ -18,6 +18,11 @@ char **split_line(char *line)
 	while (token != NULL)
 	{
 		tokens[length] = token;
+		if (tokens[length][0] == '#')
+		{
+			tokens[length] = NULL;
+			break;
+		}
 		length++;
 
 		token = _strtok3(NULL, delimiters);

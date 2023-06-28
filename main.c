@@ -17,8 +17,6 @@ int main(void)
 		/*write(STDIN_FILENO, "#FATE ", 6);*/
 		tokens = split_line(line);
 
-		if (tokens[0][0] == '#')
-			continue;
 		if (tokens[0] != NULL)
 		{
 			/*Check for the exit built-in command*/
